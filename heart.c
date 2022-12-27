@@ -7,17 +7,18 @@ void print(char message[60]);
 int show_my_heart(int *size);
 
 int main() {
-    int *size = (int *) malloc(21 * sizeof(int));
+    setlocale(LC_ALL, "portuguese");
+    int *size = (int *) malloc(100 * sizeof(int));
     
     print("insira o tamanho do seu coração: ");
     scanf("%d", size);
     
     print("\n");
+    
     show_my_heart(size);
     
     free(size);
     
-    print("\nesse é o tamanho do meu coração pra você ellenzinha <3\n");
     return 0;
 }
 
